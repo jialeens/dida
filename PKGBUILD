@@ -1,7 +1,7 @@
 # Maintainer: jialeens <jialeadmin@163.com>
 
 pkgname=dida
-pkgver=r6.54410e6
+pkgver=r8.2b5aee6
 pkgrel=1
 pkgdesc="使用electron包装的滴答客户端"
 arch=('any')
@@ -37,9 +37,8 @@ build() {
 }
 
 package() {
-	echo $pkgdir
-	install -Dm644 "$pkgdir/dida.desktop" -t "$pkgdir/usr/share/applications"
-	install -Dm644 "dida.png" "$pkgdir/usr/share/icons/hicolor/512x512/apps/dida.png"
+	install -Dm644 "$srcdir/dida.desktop" -t "$pkgdir/usr/share/applications"
+	install -Dm644 "$srcdir/dida.png" "$pkgdir/usr/share/icons/hicolor/512x512/apps/dida.png"
 	mkdir -p "$pkgdir/usr/lib/$pkgname"
     cp -r --no-preserve='ownership' -- * "$pkgdir/usr/lib/$pkgname"
 	install -Dm755 "$srcdir/dida.sh" "$pkgdir/usr/bin/dida"
