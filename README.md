@@ -1,1 +1,2 @@
-electron封装的滴答清单网页版，支持Linux
+Dida365 client using electron packaging
+使用electron包装的滴答客户端
