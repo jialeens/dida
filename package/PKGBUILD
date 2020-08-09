@@ -1,7 +1,7 @@
 # Maintainer: jialeens <jialeadmin@163.com>
 
 pkgname=dida
-pkgver=r17.523448c
+pkgver=r18.1a604b9
 pkgrel=1
 pkgdesc="使用electron包装的滴答客户端"
 arch=('any')
@@ -37,13 +37,13 @@ pkgver() {
 
 build() {
 	cd "$pkgname"
-	ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/ electron-packager . 'dida' --platform=linux --arch=x64 --out=./dist --asar --overwrite --app-version=1.0.0
+	ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/ npm install 
 }
 
 package() {
 	install -Dm644 "dida.desktop" -t "$pkgdir/usr/share/applications"
 	install -Dm644 "$srcdir/dida/dida.png" "$pkgdir/usr/share/icons/hicolor/512x512/apps/dida.png"
 	mkdir -p "$pkgdir/usr/lib/$pkgname"
-    cp -r --no-preserve='ownership' -- $pkgname/dist/* "$pkgdir/usr/lib/$pkgname"
+    cp -r --no-preserve='ownership' -- $pkgname/dist/dida-linux-x64* "$pkgdir/usr/lib/$pkgname"
 	install -Dm755 "dida.sh" "$pkgdir/usr/bin/dida"
 }

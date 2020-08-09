@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "package": "ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/ electron-packager . 'dida' --platform=linux --arch=x64 --out=./dist --asar --overwrite --app-version=1.0.0"
+  },
   "devDependencies": {
     "electron-packager": "^14.2.1"
   },
   "dependencies": {
     "electron": "^9.2.0"
-    
   }
 }
