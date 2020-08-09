@@ -23,7 +23,9 @@ source=("$pkgname::git+$url.git"
        "dida.desktop"
 	   "dida.sh")
 noextract=()
-sha256sums=("SKIP")
+sha256sums=("SKIP"
+            "900c26c1209f94033b94c38ad754aa2941f2acbf681f8c30a04f83b128d3f13"
+			"9b033481754b4f8372db99a92d2870453a5cc33afd582cadef0bdb1049290347")
 
 pkgver() {
 	cd "$srcdir/$pkgname"
@@ -39,7 +41,6 @@ build() {
 }
 
 package() {
-	export
 	install -Dm644 "dida.desktop" -t "$pkgdir/usr/share/applications"
 	install -Dm644 "$srcdir/dida.png" "$pkgdir/usr/share/icons/hicolor/512x512/apps/dida.png"
 	mkdir -p "$pkgdir/usr/lib/$pkgname"
