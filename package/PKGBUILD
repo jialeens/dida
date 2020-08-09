@@ -37,9 +37,9 @@ build() {
 }
 
 package() {
-	install -Dm644 "dida.desktop" -t "$pkgdir/usr/share/applications"
+	install -Dm644 "$srcdir/dida.desktop" -t "$pkgdir/usr/share/applications"
 	install -Dm644 "$srcdir/dida.png" "$pkgdir/usr/share/icons/hicolor/512x512/apps/dida.png"
 	mkdir -p "$pkgdir/usr/lib/$pkgname"
     cp -r --no-preserve='ownership' -- * "$pkgdir/usr/lib/$pkgname"
-	install -Dm755 "dida.sh" "$pkgdir/usr/bin/dida"
+	install -Dm755 "$srcdir/dida.sh" "$pkgdir/usr/bin/dida"
 }
