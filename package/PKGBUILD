@@ -24,7 +24,7 @@ source=("$pkgname::git+$url.git"
 	   "dida.sh")
 noextract=()
 sha256sums=("SKIP"
-            "900c26c1209f94033b94c38ad754aa2941f2acbf681f8c30a04f83b128d3f13"
+            "2900c26c1209f94033b94c38ad754aa2941f2acbf681f8c30a04f83b128d3f13"
 			"9b033481754b4f8372db99a92d2870453a5cc33afd582cadef0bdb1049290347")
 
 pkgver() {
