@@ -1,7 +1,7 @@
 const { app, BrowserWindow, Menu, Tray, Notification } = require('electron');
 let tray = null
 Menu.setApplicationMenu(null);
-
+let close = false
 app.on('ready', () => {
     tray = new Tray(__dirname + '/dida.png')
     let win = new BrowserWindow();
@@ -24,9 +24,11 @@ app.on('ready', () => {
     const contextMenu = Menu.buildFromTemplate(trayMenuTemplate);
     tray.setContextMenu(contextMenu);
     win.on('close', (event) => {
-        event.preventDefault();
-        win.hide();
-        win.setSkipTaskbar(true);
+        if (!close) {
+            event.preventDefault();
+            win.hide();
+            win.setSkipTaskbar(true);
+        }
     })
     win.loadURL('https://dida365.com/signin');
 })
