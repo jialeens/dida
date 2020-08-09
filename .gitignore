@@ -3,4 +3,5 @@
 /package/dida
 /package/pkg
 /package/src
-package/dida
+/package/dida
+package-lock.json
