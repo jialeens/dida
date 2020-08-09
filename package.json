@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "package": "ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/ electron-packager . 'dida' --platform=linux --arch=x64 --out=./dist --asar --overwrite  --icon=.dida.png --app-version=1.0.0"
+    "package": "electron-packager . 'dida' --platform=linux --arch=x64 --out=./dist --asar --overwrite  --icon=.dida.png --app-version=1.0.0"
   },
   "devDependencies": {
     "electron-packager": "^14.2.1",
