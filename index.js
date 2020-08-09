@@ -17,6 +17,7 @@ app.on('ready', () => {
         {
             label: '退出',
             click: function () {
+                close = true;
                 app.quit();
             }
         }
