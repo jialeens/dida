@@ -1,7 +1,7 @@
 # Maintainer: jialeens <jialeadmin@163.com>
 
 pkgname=dida
-pkgver=r10.60d5216
+pkgver=r11.f44f2ff
 pkgrel=1
 pkgdesc="使用electron包装的滴答客户端"
 arch=('any')
@@ -19,7 +19,9 @@ backup=()
 options=()
 install=
 changelog=
-source=("$pkgname::git+$url.git")
+source=("$pkgname::git+$url.git"
+       "dida.desktop"
+	   "dida.sh")
 noextract=()
 sha256sums=("SKIP")
 
@@ -38,9 +40,9 @@ build() {
 
 package() {
 	export
-	install -Dm644 "$srcdir/dida.desktop" -t "$pkgdir/usr/share/applications"
+	install -Dm644 "dida.desktop" -t "$pkgdir/usr/share/applications"
 	install -Dm644 "$srcdir/dida.png" "$pkgdir/usr/share/icons/hicolor/512x512/apps/dida.png"
 	mkdir -p "$pkgdir/usr/lib/$pkgname"
     cp -r --no-preserve='ownership' -- * "$pkgdir/usr/lib/$pkgname"
-	install -Dm755 "$srcdir/dida.sh" "$pkgdir/usr/bin/dida"
+	install -Dm755 "dida.sh" "$pkgdir/usr/bin/dida"
 }
