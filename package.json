@@ -1,0 +1,13 @@
+{
+  "name": "dida",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-packager": "^14.2.1"
+  },
+  "dependencies": {
+    "electron": "^9.2.0"
+    
+  }
+}
