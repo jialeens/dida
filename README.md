@@ -1,1 +1,1 @@
-electron版 Linux
+electron封装的滴答清单网页版，支持Linux
