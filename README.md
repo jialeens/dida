@@ -10,8 +10,7 @@ Dida365 client using electron packaging
 ```shell
 yaourt -S dida
 ```
-
-或
+or
 ```shell
 yaourt -S dida-git
 ```
@@ -20,8 +19,7 @@ yaourt -S dida-git
 ```shell
 yay -S dida
 ```
-
-或
+or
 ```shell
 yay -S dida-git
 ```
