@@ -4,7 +4,7 @@ Dida365 client using electron packaging
 
 这是使用electron包装的滴答客户端，解决滴答清单在linux下没有客户端的问题
 
-## 3.安装方法
+## 2.安装方法
 
 ```shell
 yaourt -S dida
@@ -14,7 +14,7 @@ yaourt -S dida
 ```shell
 yaourt -S dida-git
 ```
-## 2.已知问题
+## 3.已知问题
 
 - 桌面提醒后，鼠标点击消息无法获得窗口焦点。
 
