@@ -1,10 +1,12 @@
 const { app, BrowserWindow, Menu, Tray, Notification } = require('electron');
+let win = null;
 let tray = null
 Menu.setApplicationMenu(null);
 let close = false
-app.on('ready', () => {
+
+function createWindow() {
     tray = new Tray(__dirname + '/dida.png')
-    let win = new BrowserWindow();
+    win = new BrowserWindow();
     // win.webContents.openDevTools();
     var trayMenuTemplate = [
         {
@@ -32,4 +34,18 @@ app.on('ready', () => {
         }
     })
     win.loadURL('https://dida365.com/signin');
-})
+}
+
+const gotTheLock = app.requestSingleInstanceLock();
+if (!gotTheLock) {
+    app.quit()
+} else {
+    app.on('second-instance', (event, commandLine, workingDirectory) => {
+        if (win) {
+            if (win.isMinimized()) win.restore()
+            win.focus()
+        }
+    })
+}
+
+app.on('ready', createWindow)
