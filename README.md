@@ -6,6 +6,7 @@ Dida365 client using electron packaging
 
 ## 2.安装方法
 
+### yaourt
 ```shell
 yaourt -S dida
 ```
@@ -14,6 +15,17 @@ yaourt -S dida
 ```shell
 yaourt -S dida-git
 ```
+### yay
+
+```shell
+yay -S dida
+```
+
+或
+```shell
+yay -S dida-git
+```
+
 ## 3.已知问题
 
 - 桌面提醒后，鼠标点击消息无法获得窗口焦点。
