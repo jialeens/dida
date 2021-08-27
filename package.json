@@ -7,7 +7,7 @@
     "package": "ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/ electron-packager . 'dida' --platform=linux --arch=x64 --out=./dist --asar --overwrite  --icon=.dida.png --app-version=1.0.0"
   },
   "devDependencies": {
-    "electron-packager": "^14.2.1",
+    "electron-packager": "^15.3.0",
     "electron": "^9.2.0"
   },
   "dependencies": {
